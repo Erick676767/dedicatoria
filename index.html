@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para el amor de mi vida ❤️</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .izquierda {
+            width: 40%;
+            text-align: center;
+        }
+        .derecha {
+            width: 55%;
+            height: 90vh;
+            overflow-y: auto;
+            padding-right: 15px;
+            line-height: 1.4;
+        }
+        .derecha::-webkit-scrollbar {
+            width: 6px;
+        }
+        .derecha::-webkit-scrollbar-thumb {
+            background: #FFB6C1;
+            border-radius: 10px;
+        }
+        
+        h2 { color: #FFB6C1; font-family: Georgia, serif; }
+        .parrafo { margin: 6px 0; font-size: 0.95rem; }
+        .destacado-1 { color: #FFB6C1; font-family: Georgia, serif; font-weight: bold; font-size: 1.1rem; }
+        .destacado-2 { color: #FF69B4; font-family: Georgia, serif; font-weight: bold; font-size: 1rem; word-break: break-all; }
+        .destacado-3 { color: #FFC0CB; font-weight: bold; }
+        
+        /* Aviso flotante para activar la música */
+        #aviso-musica {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FFB6C1;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            box-shadow: 0 0 12px rgba(255, 182, 193, 0.6);
+            animation: parpadear 1.5s infinite;
+            z-index: 1000;
+        }
+        @keyframes parpadear {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .corazon {
+            position: absolute;
+            color: #FFB6C1;
+            font-size: 20px;
+            animation: flotar 4s linear infinite;
+            bottom: -20px;
+            pointer-events: none;
+        }
+        @keyframes flotar {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- AVISO VISIBLE PARA ACTIVAR LA MÚSICA -->
+    <div id="aviso-musica">🎵 Presiona acá mi amorcito ❤️</div>
+
+    <!-- REPRODUCTOR DE AUDIO -->
+    <audio id="miAudio" loop>
+        <source src="musica.wav" type="audio/wav">
+    </audio>
+
+    <!-- ZONA IZQUIERDA -->
+    <div class="izquierda">
+        <h2>🌻 ¡Felices 8 Meses! 🌻</h2>
+    </div>
+
+    <!-- ZONA DERECHA: TU MENSAJE CORREGIDO -->
+    <div class="derecha">
+        <p class="parrafo destacado-1">AMORCITOOOO 💖</p>
+        <p class="parrafo">Como te lo prometí algún día,</p>
+        <p class="parrafo">te haría algo como esto</p>
+        <p class="parrafo">&nbsp;</p>
+        <p class="parrafo">Te amo muchísimooooo,</p>
+        <p class="parrafo destacado-3">gracias por estos hermosos 8 meses.</p>
+        <p class="parrafo">Fueron los mejores de mi vida</p>
+        <p class="parrafo">porque llegaste a mí.</p>
+        <p class="parrafo">&nbsp;</p>
+        <p class="parrafo">Quiero agradecerte por cada momento</p>
+        <p class="parrafo">que pasamos juntos, por cada esfuerzo</p>
+        <p class="parrafo">que hacías para entenderme HJASSAHJ,</p>
+        <p class="parrafo">poke yo sé que soy, pues, alguien algo</p>
+        <p class="parrafo">loquito por así decirlo</p>
+        <p class="parrafo">&nbsp;</p>
+        <p class="parrafo">Me encanta, de verdad me encanta saber</p>
+        <p class="parrafo">que estás a mi lado y que gracias a ti</p>
+        <p class="parrafo">he logrado tantas cosas en mi vida.</p>
+        <p class="parrafo">&nbsp;</p>
+        <p class="parrafo">Eres el motivo por el cual sigo adelante,</p>
+        <p class="parrafo">te volviste la persona más especial,</p>
+        <p class="parrafo">te volviste mi mundo entero.</p>
+        <p class="parrafo">&nbsp;</p>
+        <p class="parrafo">Solo te quiero a ti por siempre,</p>
+        <p class="parrafo">quiero amarte y desearte por siempre,</p>
+        <p class="parrafo">quiero que todo esto siga así para siempre,</p>
+        <p class="parrafo">&nbsp;</p>
+        <p class="parrafo">poke cada segundo, cada minuto a tu lado</p>
+        <p class="parrafo">me enseña nuevas cosas y me hace sentir</p>
+        <p class="parrafo">muchas cosas, jamás pensé amar a alguien</p>
+        <p class="parrafo">como te amo a ti.</p>
+        <p class="parrafo">&nbsp;</p>
+        <p class="parrafo">Eres lo más hermoso de los 18 años</p>
+        <p class="parrafo">que he pasado viviendo...</p>
+        <p class="parrafo">Gracias por absolutamente todo mi bb,</p>
+        <p class="parrafo">te amo muchísimo y nunca lo olvides, ¿chi? 💕</p>
+        <p class="parrafo">&nbsp;</p>
+        <p class="parrafo destacado-2">TE REAMOOOOOOOOOOOOOOOOOOOOOOOOOOOO 💖</p>
+    </div>
+
+    <script>
+        // Reproduce la música al primer clic en cualquier parte de la página
+        const audio = document.getElementById('miAudio');
+        const aviso = document.getElementById('aviso-musica');
+
+        document.body.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    aviso.style.display = 'none'; // Desaparece el aviso al sonar
+                }).catch(e => console.log(e));
+            }
+        }, { once: true });
+
+        // Generador de corazones flotantes
+        function crearCorazon() {
+            const corazon = document.createElement('div');
+            corazon.classList.add('corazon');
+            corazon.innerHTML = ['💕', '💖', '🌸', '✨', '💗', '❤️'][Math.floor(Math.random() * 6)];
+            corazon.style.left = Math.random() * 100 + 'vw';
+            corazon.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.body.appendChild(corazon);
+            setTimeout(() => { corazon.remove(); }, 4000);
+        }
+        setInterval(crearCorazon, 300);
+    </script>
+</body>
+</html>
